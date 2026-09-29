@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RF-05 · Registrar fechas importantes</title>
+</head>
+<body>
+
+  <main>
+
+    <section id="registro">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos de la fecha</legend>
+
+          <p>
+            <label for="expediente">Número de expediente:</label><br>
+            <input type="text" id="expediente" name="expediente" placeholder="Ej. 123/2026" required>
+          </p>
+
+          <p>
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo" placeholder="Ej. Audiencia inicial" required>
+          </p>
+
+          <p>
+            <label for="tipo">Tipo de fecha:</label><br>
+            <select id="tipo" name="tipo">
+              <option value="audiencia">Audiencia</option>
+              <option value="vencimiento">Vencimiento de plazo</option>
+              <option value="entrega">Entrega de documentos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="fecha">Fecha:</label><br>
+            <input type="date" id="fecha" name="fecha" required>
+          </p>
+
+          <p>
+            <label for="hora">Hora:</label><br>
+            <input type="time" id="hora" name="hora">
+          </p>
+
+          <p>
+            <label for="notas">Notas:</label><br>
+            <textarea id="notas" name="notas" rows="4" cols="40"></textarea>
+          </p>
+
+          <button type="submit">Guardar fecha</button>
+          <button type="reset">Limpiar</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="fechas">
+      <h2>Fechas registradas</h2>
+      <table border="1">
+        <caption>Fechas importantes por expediente</caption>
+        <thead>
+          <tr>
+            <th scope="col">Expediente</th>
+            <th scope="col">Título</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123/2026</td>
+            <td>Audiencia inicial</td>
+            <td>Audiencia</td>
+            <td><time datetime="2026-10-15">15 de octubre de 2026</time></td>
+          </tr>
+          <tr>
+            <td>123/2026</td>
+            <td>Presentar pruebas</td>
+            <td>Vencimiento de plazo</td>
+            <td><time datetime="2026-11-02">2 de noviembre de 2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Registrar fechas importantes</title>
+
+  
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Roboto+Flex:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  
+  <style>
+
+    
+    
+    body {
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 16px;
+    }
+
+    
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    
+    h3,
+    .subtitulo {
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* Botones */
+    .btn {
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Etiquetas de formularios */
+    .form-label {
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* Inputs */
+    .form-control,
+    .form-select {
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 16px;
+    }
+
+    /* Navbar */
+    .navbar {
+      font-family: 'Roboto Flex', sans-serif;
+    }
+
+    .navbar-brand {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Encabezado */
+    .encabezado {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .encabezado p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+  </style>
+
+</head>
+
+
+<body class="bg-light">
+
+
+  <!-- =========================
+       NAVBAR
+       ========================= -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+         Despacho Jurídico
+      </a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="menuPrincipal">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Inicio
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Expedientes
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              Fechas importantes
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Clientes
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       CONTENIDO
+       ========================= -->
+
+  <main class="container py-5">
+
+
+    
+
+    <div class="encabezado">
+
+      <h1>
+        Fechas importantes
+      </h1>
+
+      <p>
+        Registra y consulta las fechas importantes de los expedientes.
+      </p>
+
+    </div>
+
+
+    
+
+    <section id="registro" class="mb-5">
+
+      <div class="card shadow-sm">
+
+        <div class="card-header bg-dark text-white">
+
+          <h2 class="mb-0">
+            Registrar nueva fecha
+          </h2>
+
+        </div>
+
+
+        <div class="card-body">
+
+          <form action="#" method="post">
+
+            <fieldset>
+
+              <legend class="visually-hidden">
+                Datos de la fecha
+              </legend>
+
+
+              
+
+              <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                  <label
+                    for="expediente"
+                    class="form-label">
+
+                    Número de expediente
+
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expediente"
+                    name="expediente"
+                    placeholder="Ej. 123/2026"
+                    required>
+
+                </div>
+
+
+                <div class="col-md-6 mb-3">
+
+                  <label
+                    for="titulo"
+                    class="form-label">
+
+                    Título
+
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Ej. Audiencia inicial"
+                    required>
+
+                </div>
+
+              </div>
+
+
+              
+
+              <div class="mb-3">
+
+                <label
+                  for="tipo"
+                  class="form-label">
+
+                  Tipo de fecha
+
+                </label>
+
+
+                <select
+                  id="tipo"
+                  name="tipo"
+                  class="form-select">
+
+                  <option value="audiencia">
+                    Audiencia
+                  </option>
+
+                  <option value="vencimiento">
+                    Vencimiento de plazo
+                  </option>
+
+                  <option value="entrega">
+                    Entrega de documentos
+                  </option>
+
+                  <option value="otro">
+                    Otro
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              
+
+              <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                  <label
+                    for="fecha"
+                    class="form-label">
+
+                    Fecha
+
+                  </label>
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="fecha"
+                    name="fecha"
+                    required>
+
+                </div>
+
+
+                <div class="col-md-6 mb-3">
+
+                  <label
+                    for="hora"
+                    class="form-label">
+
+                    Hora
+
+                  </label>
+
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="hora"
+                    name="hora">
+
+                </div>
+
+              </div>
+
+
+              
+
+              <div class="mb-4">
+
+                <label
+                  for="notas"
+                  class="form-label">
+
+                  Notas
+
+                </label>
+
+                <textarea
+                  id="notas"
+                  name="notas"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Agrega información adicional..."></textarea>
+
+              </div>
+
+
+              <!-- Botones -->
+
+              <div class="d-flex gap-2 justify-content-end">
+
+                <button
+                  type="reset"
+                  class="btn btn-outline-secondary">
+
+                  Limpiar
+
+                </button>
+
+
+                <button
+                  type="submit"
+                  class="btn btn-dark">
+
+                  Guardar fecha
+
+                </button>
+
+              </div>
+
+            </fieldset>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FECHAS REGISTRADAS
+         ========================= -->
+
+    <section id="fechas">
+
+      <div class="card shadow-sm">
+
+
+        <div class="card-header bg-dark text-white">
+
+          <h2 class="mb-0">
+            Fechas registradas
+          </h2>
+
+        </div>
+
+
+        <div class="card-body">
+
+          <p class="subtitulo">
+            Fechas importantes por expediente
+          </p>
+
+
+          <div class="table-responsive">
+
+            <table
+              class="table table-hover table-striped align-middle">
+
+              <caption class="visually-hidden">
+                Fechas importantes por expediente
+              </caption>
+
+
+              <thead class="table-dark">
+
+                <tr>
+
+                  <th scope="col">
+                    Expediente
+                  </th>
+
+                  <th scope="col">
+                    Título
+                  </th>
+
+                  <th scope="col">
+                    Tipo
+                  </th>
+
+                  <th scope="col">
+                    Fecha
+                  </th>
+
+                </tr>
+
+              </thead>
+
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                    <strong>123/2026</strong>
+                  </td>
+
+                  <td>
+                    Audiencia inicial
+                  </td>
+
+                  <td>
+
+                    <span class="badge text-bg-primary">
+                      Audiencia
+                    </span>
+
+                  </td>
+
+                  <td>
+
+                    <time datetime="2026-10-15">
+                      15 de octubre de 2026
+                    </time>
+
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>
+                    <strong>123/2026</strong>
+                  </td>
+
+                  <td>
+                    Presentar pruebas
+                  </td>
+
+                  <td>
+
+                    <span class="badge text-bg-warning">
+                      Vencimiento
+                    </span>
+
+                  </td>
+
+                  <td>
+
+                    <time datetime="2026-11-02">
+                      2 de noviembre de 2026
+                    </time>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+
+    <p class="mb-0">
+      © 2026 Despacho Jurídico · Todos los derechos reservados
+    </p>
+
+  </footer>
+
+
+  
+
+  
+</body>
+</html>
